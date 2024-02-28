@@ -30,7 +30,7 @@ joblib.dump(model_lr, 'model_lr.pkl')
 
 app = Flask(__name__)
 
-@app.route('/predict_lr', methods=['POST'])
+@app.route('/predict', methods=['POST'])
 def predict_lr():
     logging.info("Accessed the /predict_lr route")
     data = request.get_json()

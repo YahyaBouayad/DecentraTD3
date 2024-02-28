@@ -23,7 +23,7 @@ joblib.dump(model_rf, 'model_rf.pkl')
 
 app = Flask(__name__)
 
-@app.route('/predict_rf', methods=['POST'])
+@app.route('/predict', methods=['POST'])
 def predict_rf():
     data = request.get_json()
     features = [data['features']]

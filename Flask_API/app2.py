@@ -23,7 +23,7 @@ joblib.dump(model_svm, 'model_svm.pkl')
 
 app = Flask(__name__)
 
-@app.route('/predict_svm', methods=['POST'])
+@app.route('/predict', methods=['POST'])
 def predict_svm():
     data = request.get_json()
     features = [data['features']]
